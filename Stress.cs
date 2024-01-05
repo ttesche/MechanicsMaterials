@@ -6,9 +6,17 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace MechanicsMaterials
 {
+
+
+    /// <summary>
+    /// Class for stress analysis in mechanics.
+    /// REFERENCE: https://mechcollege.com/stress-types/ 
+    /// STRESSES CATHEGORIZED - >  ALTHOUGH IT'S THE SAME FORMULAS, I HAVE SEPARATE IN DIFFERENTES METHODS.
+    /// </summary>,
+    
+
     public class Stress
-    /* REFERENCE: https://mechcollege.com/stress-types/ */
-    /* STRESSES CATHEGORIZED - >  ALTHOUGH IT'S THE SAME FORMULAS, I HAVE SEPARATE IN DIFFERENTES METHODS.*/
+ 
     {
         public double Normal(double area, double force)
         {
@@ -52,7 +60,7 @@ namespace MechanicsMaterials
              * i_-> moment of inertia */
             ValidateInputs(force, distance, y, inertia);
             double moment = force * distance;
-            double equation = (moment * y_) / inertia;
+            double equation = (moment * y) / inertia;
             return equation;
 
         }
@@ -65,9 +73,6 @@ namespace MechanicsMaterials
             * r_ -> radius of section
             * j_ -> polar moment of inertia */
             ValidateInputs(torque, radius, polarMoment);
-            if (polarMoment == 0)
-                throw new ArgumentException("Polar moment of inertia must be non-zero.");
-
             double equation = (torque * radius) / polarMoment;
            
             return equation;   
