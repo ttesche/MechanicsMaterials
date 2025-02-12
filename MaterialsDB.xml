@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MaterialDatabase>
+  <Material>
+    <Name>ASTM A36</Name>
+    <YoungModulus>200000000000</YoungModulus>
+    <PoissonRatio>0.3</PoissonRatio>
+    <YieldStrength>250000000</YieldStrength>
+    <TensileStrength>450000000</TensileStrength>
+  </Material>
+  <Material>
+    <Name>SAE 1020</Name>
+    <YoungModulus>200000000000</YoungModulus>
+    <PoissonRatio>0.3</PoissonRatio>
+    <YieldStrength>325000000</YieldStrength>
+    <TensileStrength>485000000</TensileStrength>
+  </Material>
+</MaterialDatabase>
