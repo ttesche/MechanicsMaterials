@@ -92,6 +92,30 @@ namespace MechanicsMaterials
             return equation;
         }
 
+        public double HoopStress_circuferencial(double internalPressure, double internalRadius, double wallThickness)
+        {
+            /* Hoop stress Circuferencial is a stress cause by pressure in a thin wall cilinder or pressure vesssel 
+             * p -: internal pressure Pa
+             * r -> internal radius in m
+             * t -> wallthicknes m                       
+             */
+
+            ValidateInputs(internalPressure,internalRadius, wallThickness)
+            return (internalPressure * internalRadius) / wallThickness;
+
+        }
+        public double HoopStress_Longitudinal(double internalPressure, double internalRadius, double wallThickness)
+        {
+            /* Hoop stress longitudinal is a stress cause by pressure in a thin wall cilinder or pressure vesssel 
+             * p -: internal pressure Pa
+             * r -> internal radius in m
+             * t -> wallthicknes m                       
+             */
+            ValidateInputs(internalPressure, internalRadius, wallThickness)
+            return (internalPressure * internalRadius) / 2*wallThickness;
+
+        }
+
         private void ValidateInputs(params double[] values)
         {
             foreach (double value in values)
